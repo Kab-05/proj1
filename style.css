@@ -1,0 +1,109 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f9a8d4, #fda4af);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Card */
+.content-box {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    color: #e11d48;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+h1 span {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Yes */
+#yes {
+    background: #bbf7d0;
+}
+
+/* No */
+#no {
+    background: #fb7185;
+    color: white;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-4px, 4px); }
+    50% { transform: translate(4px, -4px); }
+    75% { transform: translate(-4px, -4px); }
+    100% { transform: translate(4px, 4px); }
+}
+
+.shake {
+    animation: shake 0.2s infinite;
+}
+
+/* Evil emoji */
+.evil-face {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 12px;
+    font-size: 18px;
+    opacity: 0.7;
+}
